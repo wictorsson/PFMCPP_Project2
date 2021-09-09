@@ -16,14 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+int
+float
+bool
+char
+double
+unsigned int
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -60,9 +58,27 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
+    int samples = 44100;
+    int bitrate = 8;
+    int volume = 11;
+    float temperature = 29.5f;
+    float pressure = 56.9f;
+    float percent = 12.56f;
+    bool playing = true;
+    bool stopped = false;
+    bool green = true;
+    char gate = 'c';
+    char intvalue = 100;
+    char grade = 'a';
+    double pi = 3.14159265359;
+    double knobValue = 0.99999999;
+    double product = 0.987*0.123456;
+    unsigned int dayOfMonth = 8;
+    unsigned int page = 12;
+    unsigned int counter = 100;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, samples, bitrate, volume, temperature, pressure,percent, playing, stopped, green, gate, intvalue, grade, pi, knobValue, product, dayOfMonth, page, counter); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,43 +95,86 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+int bitCrush(int resolution = 24, int downsampling=1)
+{    
+    ignoreUnused(resolution, downsampling);
 
+    return{};
+}
 /*
  2)
  */
+bool gate(int threshold=0)
+{    
+    ignoreUnused(threshold);
 
+    return{};   
+}
 /*
  3)
  */
+double calculate(int x, int y)
+{    
+    ignoreUnused(x,y);
 
+    return{};
+}
 /*
  4)
  */
-
+ void startPlaylist(int songNumber=1, int volume=10)
+ {   
+    ignoreUnused(songNumber,volume);
+ } 
 /*
  5)
  */
-
+void addSong(char song, char artist, char label, char genre)
+{    
+    ignoreUnused(song, artist, label, genre );
+ } 
 /*
  6)
  */
+int turnKnob(int value)
+{
+    ignoreUnused(value);
 
+    return{};
+}
 /*
  7)
  */
-
+void playNote(int pitch, int duration, int velocity = 90)
+{
+    ignoreUnused(pitch, duration, velocity);
+}
 /*
  8)
  */
+int startCounter(int startTime = 10, int endTime =0)
+{
+    ignoreUnused(startTime,endTime);
 
+    return{};
+}
 /*
  9)
  */
+int random(int highLimit, int lowLimit)
+{
+    ignoreUnused(highLimit,lowLimit);
 
+    return{};
+}
 /*
  10)
  */
+void delay(float time, int feedback)
+{
+    ignoreUnused(time,feedback);
 
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -136,27 +195,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto bitCrushed = bitCrush(8, 2);
     //2)
-    
+    auto gateState = gate(-10);
     //3)
-    
+    auto sum = calculate(5,5); 
     //4)
-    
+    startPlaylist(1,1);
     //5)
-    
+    addSong(1,1,1,1);
     //6)
-    
+    auto knobValue = turnKnob(5);
     //7)
-    
+    playNote(50,50,50);
     //8)
-    
+    auto countDown = startCounter(10,0);
     //9)
-    
+    auto number = random(100,0);
     //10)
+    delay(10.5,100);  
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, bitCrushed, gateState, sum, knobValue, countDown,  number);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
