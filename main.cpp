@@ -95,8 +95,8 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-int bitCrush(int resolution = 24, int downsampling=1){
-    
+int bitCrush(int resolution = 24, int downsampling=1)
+{    
     ignoreUnused(resolution, downsampling);
 
     return{};
@@ -104,8 +104,8 @@ int bitCrush(int resolution = 24, int downsampling=1){
 /*
  2)
  */
-bool gate(int threshold=0){
-    
+bool gate(int threshold=0)
+{    
     ignoreUnused(threshold);
 
     return{};   
@@ -113,8 +113,8 @@ bool gate(int threshold=0){
 /*
  3)
  */
-double calculate(int x, int y){
-    
+double calculate(int x, int y)
+{    
     ignoreUnused(x,y);
 
     return{};
@@ -122,21 +122,22 @@ double calculate(int x, int y){
 /*
  4)
  */
- void startPlaylist(int songNumber=1, int volume=10){
-    
+ void startPlaylist(int songNumber=1, int volume=10)
+ {   
     ignoreUnused(songNumber,volume);
  } 
 /*
  5)
  */
-void addSong(char song, char artist, char label, char genre){
-    
+void addSong(char song, char artist, char label, char genre)
+{    
     ignoreUnused(song, artist, label, genre );
  } 
 /*
  6)
  */
-int turnKnob(int value){
+int turnKnob(int value)
+{
     ignoreUnused(value);
 
     return{};
@@ -144,15 +145,15 @@ int turnKnob(int value){
 /*
  7)
  */
-void playNote(int pitch, int duration, int velocity = 90){
-
+void playNote(int pitch, int duration, int velocity = 90)
+{
     ignoreUnused(pitch, duration, velocity);
 }
 /*
  8)
  */
-int startCounter(int startTime = 10, int endTime =0){
-
+int startCounter(int startTime = 10, int endTime =0)
+{
     ignoreUnused(startTime,endTime);
 
     return{};
@@ -160,8 +161,8 @@ int startCounter(int startTime = 10, int endTime =0){
 /*
  9)
  */
-int random(int highLimit, int lowLimit){
-
+int random(int highLimit, int lowLimit)
+{
     ignoreUnused(highLimit,lowLimit);
 
     return{};
@@ -169,8 +170,8 @@ int random(int highLimit, int lowLimit){
 /*
  10)
  */
-void delay(float time, int feedback){
-
+void delay(float time, int feedback)
+{
     ignoreUnused(time,feedback);
 
 }
